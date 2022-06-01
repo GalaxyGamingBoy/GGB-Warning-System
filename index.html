@@ -57,7 +57,7 @@
                 let tmpCurrURL = document.location.href;
 
                 if (websiteToGo == null) {
-                    websiteToGo = tmpCurrURL;
+                    document.location.href = tmpCurrURL;
                 } else {
                     document.location.href = "https://".concat(websiteToGo);
                 }
