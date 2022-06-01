@@ -54,7 +54,13 @@
             detailsURL.innerHTML = websiteToGo;
 
             redirectBTN.onclick = function () {
-                document.location.href = "https://".concat(websiteToGo);
+                let tmpCurrURL = document.location.href;
+
+                if (websiteToGo == null) {
+                    websiteToGo = tmpCurrURL;
+                } else {
+                    document.location.href = "https://".concat(websiteToGo);
+                }
             };
         </script>
     </body>
